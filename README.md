@@ -14,7 +14,7 @@
     <p>
         The software pipeline incorporates multiple components to facilitate the complete simulation of the quadrotor platform. A detailed system diagram demonstrates the flow of data through various modules, from trajectory planning to dynamics modeling and feedback control.
     </p>
-    <img src="autonomousQuadrotor/src/state-diagram.png" alt="State Diagram of Quadrotor Control System">
+    <img src="src/state-diagram.png" alt="State Diagram of Quadrotor Control System" width="1003.8" height="806.4">
     <h2>Key Algorithms and Mathematics</h2>
     <p>
         The control system's design is founded on various mathematical models and algorithms, including:
@@ -50,9 +50,20 @@
         <li><strong>Senerio 5.2:</strong> Expands on the previous scenario by maintaining a specific orientation for a prolonged period, to assess the UAV's stability in holding angles.</li>
     </ul>
     <h2>Running the Simulation</h2>
-    <p>
-        To run the quadrotor simulation, navigate to the MATLAB directory and execute the main.m script. This initiates the simulation, invoking the various control and planning components to simulate quadrotor flight along a trajectory. 
-    </p>
+<p>
+    To run the quadrotor simulation, navigate to the MATLAB directory and execute the <code>main.m</code> script with the corresponding scenario number. Below are the different scenarios you can run, which correspond to various tasks that the UAV can perform:
+</p>
+<ul>
+    <li><code>main(1)</code> - Transitions the UAV between multiple waypoints along the x-axis at a fixed altitude, incrementing by 10 cm.</li>
+    <li><code>main(2)</code> - Commands the UAV to take off and hover, then generates a command to track a single waypoint at [0, 0, 0.1] m (zero velocity).</li>
+    <li><code>main(3)</code> - Directs the UAV to take off, ascend to a height of 1.0 m, then descend back to the ground.</li>
+    <li><code>main(4)</code> - Executes a more complex trajectory, tracking to specific coordinates (2m, 1m, 2m) before returning.</li>
+    <li><code>main(5.1)</code> - Maintains a slight elevation and heading change to observe the UAV's stability.</li>
+    <li><code>main(5.2)</code> - Maintains a specific orientation for a prolonged period to assess stability in holding angles.</li>
+</ul>
+<p>
+    The results of these scenarios, including the UAV's behavior and any errors, can be visualized through the plots generated during the simulation.
+</p>
     <h2>Feedback Loop and Control</h2>
     <p>
         The feedback loop plays a critical role in maintaining the stability and accuracy of the UAV. The provided state diagram illustrates how the system state is used in conjunction with desired state information to calculate errors and adjust control inputs continuously.
