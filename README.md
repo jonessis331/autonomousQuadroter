@@ -14,7 +14,7 @@
     <p>
         The software pipeline incorporates multiple components to facilitate the complete simulation of the quadrotor platform. A detailed system diagram demonstrates the flow of data through various modules, from trajectory planning to dynamics modeling and feedback control.
     </p>
-    <img src="autonomousQuadrotor/src/img/state_diagram.png" alt="State Diagram of Quadrotor Control System">
+    <img src="autonomousQuadrotor/src/state-diagram.png" alt="State Diagram of Quadrotor Control System">
     <h2>Key Algorithms and Mathematics</h2>
     <p>
         The control system's design is founded on various mathematical models and algorithms, including:
